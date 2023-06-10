@@ -1,0 +1,16 @@
+/*Estilizando atraves de tags */
+body {
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+/*Estilizando por classe */
+
+.umaclasse {
+    color: black
+
+}
+
+#identificador {
+    text-decoration: overline;
+}
