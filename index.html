@@ -20,26 +20,29 @@
         C
         <br />
         <br />
-
-        <button id="contador">+1</button>
-        <span id="atual">0</span>
+        
+       <p>botão que muda de cor WOW!</p>
+       <button class="botao">Cores</button>
         
         <!-- JQuery import-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript">  
-           let $contador = $('#contador')
-           let $atual = $('#atual')
-           
-           $contador.on('click', function() {
-                let valor = $atual.text()
-                valor = parseInt(valor)
-                valor = valor + 1
-                
-                $atual.text(valor)
-                console.log(valor)
-
-           })
             
+            $(function() {
+
+            var colors = ['red', 'blue', 'green', 'grey', 'white', 'yellow', 'purple', 'cyan'],
+                color;
+
+            $('.botao').click(function() {
+                var randColor;
+                 do {
+                     randColor = colors[Math.floor(Math.random() * colors.length)];
+                } while (color == randColor);
+                $('.botao').css('background-color', randColor)
+                color=randColor;
+            });
+        
+        })
         </script>
     </body>
 </html>
